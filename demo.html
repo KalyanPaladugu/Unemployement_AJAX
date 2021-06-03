@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+     <!-- Modals -->
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script>
+
+        //Array Destructuring
+
+        let data=[1,2,3,4,5,6]
+        // let b=data[1]
+
+        let [a,,c,...remainData]=data
+        console.log(data)
+        console.log(a)
+        // console.log(b)
+        console.log(c)
+        console.log(remainData)
+
+        function demo(){
+            return [5,6,7,8,9]
+        }
+        let [e,f,g,...re]=demo()
+        console.log(re)
+
+
+        // Object Destructuring
+        let employee= {
+            name:"Nagababu",
+            designation:"Actor",
+            locate:"Hyderabad"
+        }
+        
+        let {name,designation,locate}=employee
+        console.log(name)
+        console.log(designation)
+        console.log(locate)
+
+    //    Rest Parameter
+
+     function addition(a,b,...reData){
+         console.log(a)
+         console.log(b)
+         console.log(reData)
+
+     }
+     addition(2,3,45,6,7,8)
+
+
+
+    </script>
+</body>
+</html>
